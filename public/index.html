@@ -1,8 +1,63 @@
-<html>
-<head>
-  <title>Test</title>
-</head>
-<body>
-  <h1>Test</h1>
-</body>
+<!DOCTYPE html>
+<html ng-app="xmlSignature">
+
+  <head>
+    <meta charset="utf-8">
+    <title>XML Signature</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/angular-ui.min.css"/>
+    <link rel="stylesheet" href="/css/codemirror.css"/>
+    <link rel="stylesheet" href="/css/codemirror/theme/monokai.css"/>
+    <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/angular-ui.min.js"></script>
+    <script type="text/javascript" src="/js/codemirror.js"></script>
+    <script type="text/javascript" src="/js/codemirror/mode/xml.js"></script>
+    <script type="text/javascript" src="/js/angular/base.js"></script>
+    <script type="text/javascript" src="/js/angular/controllers/sign-with-usb-token.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse nav-tabs navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href=".">XML Signature</a>
+          <ul class="nav">
+            <li class="active"><a href="#usb-token" data-toggle="tab">USB-ключ</a></li>
+            <li><a href="#files" data-toggle="tab">Файлы</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 60px;">
+      <div class="tab-content" style="overflow: visible;">
+
+        <div class="tab-pane active" id="usb-token" ng-controller="SignWithUSBTokenController">
+          <h3>Подпись с помощью USB-ключа</h3>
+          <form ng-submit="sign()">
+            <div class="control-group">
+              <label for="input-xml" style="text-align: right; width: 100px; margin-left: -110px; float: left;">XML</label>
+              <textarea autofocus id="input-xml" ui-codemirror="{lineNumbers: true, theme:'monokai'}" ng-model="xml" name="xml" rows="20"></textarea>
+            </div>
+            <div class="control-group">
+              <label for="input-xml" style="text-align: right; width: 100px; margin-left: -110px; float: left;">PIN</label>
+              <input id="input-pin" type="password" ng-model="pin" name="pin"/>
+            </div>
+            <button class="btn btn-primary">Подписать</button>
+          </form>
+        </div>
+
+        <div class="tab-pane" id="files">
+          <h3>Подпись с помощью файлов приватного ключа и сертификата</h3>
+          <p>In progress...</p>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+
 </html>
