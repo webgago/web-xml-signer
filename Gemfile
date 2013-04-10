@@ -2,6 +2,8 @@ source 'http://rubygems.org/'
 
 gem 'sinatra'
 gem 'thin'
+gem 'nokogiri'
+gem 'xmldsign'
 
 group :development do
   gem 'rb-fsevent', '~> 0.9.1'
