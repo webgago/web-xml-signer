@@ -1,0 +1,22 @@
+.CodeMirror {
+  height: 550px;
+}
+
+.tab-content {
+  overflow: visible;
+}
+
+#main {
+  margin-top: 30px;
+}
+
+label {
+  float: left;
+  margin-left: -110px;
+  text-align: right;
+  width: 100px;
+}
+
+#input-pin {
+  margin-bottom: 0;
+}
