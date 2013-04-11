@@ -9,7 +9,6 @@ GEM
       libxml-ruby (>= 2.4.0)
     listen (0.7.2)
     method_source (0.8.1)
-    nokogiri (1.5.6)
     pry (0.9.10)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -38,7 +37,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  nokogiri
   pry
   rb-fsevent (~> 0.9.1)
   rerun
