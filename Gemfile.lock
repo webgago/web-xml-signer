@@ -30,7 +30,7 @@ GEM
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.3.7)
-    xmldsign (0.1.5)
+    xmldsign (0.1.6)
       libxml-ruby
       libxslt-ruby
 
