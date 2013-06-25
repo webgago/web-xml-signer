@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>XML Signature</title>
+    <title>XML Digital Signature</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/angular-ui.min.css"/>
     <link rel="stylesheet" href="/css/codemirror.css"/>
@@ -29,10 +29,10 @@
     <div class="navbar navbar-inverse nav-tabs navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href=".">XML Signature</a>
+          <a class="brand" href=".">XML Digital Signature</a>
           <ul class="nav">
-            <li class="active"><a href="#usb-token" data-toggle="tab">USB-ключ</a></li>
-            <li><a href="#files" data-toggle="tab">Файлы</a></li>
+            <li class="active"><a href="#usb-token" data-toggle="tab">Using USB-dongle</a></li>
+            <li><a href="#files" data-toggle="tab">Using files</a></li>
           </ul>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <div class="tab-content">
 
         <div class="tab-pane active" id="usb-token" ng-controller="SignWithUSBTokenController">
-          <h3>Подпись с помощью USB-ключа</h3>
+          <h3>Sign using USB-dongle</h3>
           <form id="sign-with-usb-token-form" ng-submit="sign()">
             <div class="control-group">
               <label for="input-xml">XML</label>
@@ -51,13 +51,13 @@
             <div class="control-group">
               <label for="input-pin">PIN</label>
               <input id="input-pin" type="password" ng-model="pin" name="pin"/>
-              <button class="btn btn-primary">Подписать</button>
+              <button class="btn btn-primary">Sign</button>
             </div>
           </form>
         </div>
 
         <div class="tab-pane" id="files">
-          <h3>Подпись с помощью файлов приватного ключа и сертификата</h3>
+          <h3>Sign using private key and certificate files</h3>
           <p>In progress...</p>
         </div>
 
