@@ -23,7 +23,7 @@ post '/insert_signature_and_certificate' do
   xmldsign_document.signature.fill_digest!
   signature_value_node = xmldsign_document.find_first('.//ds:SignatureValue')
   signature_value_node.content = params[:signature_value]
-  x509_certificate_node = xmldsign_document.find_first('.//ds:X509Certificate')
+  x509_certificate_node = xmldsign_document.find_first('.//ds:X509Certificate') || xmldsign_document.find_first('.//wsse:BinarySecurityToken')
   x509_certificate_node.content = params[:x509_certificate]
   xmldsign_document.to_s
 end

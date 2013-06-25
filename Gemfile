@@ -2,7 +2,7 @@ source 'http://rubygems.org/'
 
 gem 'sinatra'
 gem 'thin'
-gem 'xmldsign'
+gem 'xmldsign', '>= 0.2.0.beta'
 
 group :development do
   gem 'rb-fsevent', '~> 0.9.1'
